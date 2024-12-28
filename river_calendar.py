@@ -9,7 +9,6 @@ def request_url(url):
 
     response = requests.get(url)
 
-    # Check
     if response.status_code == 200:
         html_content = response.text
         return html_content
@@ -60,19 +59,14 @@ def main(fixture_url, ics_file):
 
     matches = get_matches(html_content)
 
-    # new events
     calendar = Calendar()
 
     for match in matches:
-
-        # Create new event
         event = Event()
         event.name = "⚽ " + match["teams"].replace("River Plate", "RIVER")
         event.begin = match["datetime_start"]
         event.last_modified = datetime.now()
         event.description = match["competition"]
-
-        # Add match to calendar
         calendar.events.add(event)
 
     # Save the content to an .ics file)
