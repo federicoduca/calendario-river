@@ -75,6 +75,6 @@ def main(fixture_url, ics_file):
 
 
 if __name__ == "__main__":
-    ics_file = "river_calendar.ics"
+    ics_file = "../export/river_calendar.ics"
     fixture_url = "https://www.cariverplate.com.ar/calendario-de-partidos"
     main(fixture_url, ics_file)
