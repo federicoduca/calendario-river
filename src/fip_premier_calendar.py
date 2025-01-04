@@ -25,6 +25,6 @@ def main(csv_file, ics_file):
 
 
 if __name__ == "__main__":
-    csv_file = "fip_premier_tournaments_2025.csv"
-    ics_file = "fip_premier_calendar.ics"
+    csv_file = "../data/fip_premier_tournaments_2025.csv"
+    ics_file = "../export/fip_premier_calendar.ics"
     main(csv_file, ics_file)
